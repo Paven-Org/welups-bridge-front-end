@@ -19,7 +19,6 @@
   ```
   
 - Bootstrap `lerna` :
-
   ```
     lerna bootstrap
   ```
