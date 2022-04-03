@@ -1,6 +1,6 @@
-# Welups Bridge Front End
+# WELUPS Bridge Front End
 
-## Prequisites
+## Prerequisites
 
 - Install `lerna`
 
@@ -12,6 +12,12 @@
   ```
     lerna clean
   ```
+  
+- Install `dependencies`
+  ```
+    yarn
+  ```
+  
 - Bootstrap `lerna` :
 
   ```
