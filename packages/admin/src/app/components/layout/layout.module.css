@@ -1,0 +1,44 @@
+.header {
+    background: #1F2630;
+}
+
+.container {
+    /*padding: 5rem;*/
+    background: #1F2630;
+    min-height: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1F2630;
+}
+
+.footer .company {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #666E75;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    /*position: absolute;*/
+    width: 105px;
+    height: 32px;
+    /*left: 64px;*/
+    /*top: 34px;*/
+}
