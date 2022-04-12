@@ -5,12 +5,13 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useSettings from '../../hooks/useSettings';
+import axios from 'axios';
 
 const Index: React.FC = () => {
   const navigate = useNavigate();
   const { settings, updateSettings } = useSettings();
 
-  const onConnectWallet = () => {
+  const onConnectWallet = async () => {
     // @ts-ignore
     if (window.welWeb && window.welWeb.defaultAddress.base58) {
       // @ts-ignore
@@ -20,6 +21,14 @@ const Index: React.FC = () => {
         localStorage.setItem('WEL_ADDR', wallet);
       }
 
+      // // @ts-ignore
+      // const welWeb = window.welWeb;
+      //
+      // const instance = await welWeb.contract().at('WUbnXM9M4QYEkksG3ADmSan2kY5xiHTr1E');
+      // debugger;
+      // const rest = await instance.withdraw().call();
+      //
+      // console.log('rest : ', rest)
       if (updateSettings) {
         updateSettings({
           ...settings,

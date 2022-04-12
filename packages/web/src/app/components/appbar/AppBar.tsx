@@ -70,7 +70,13 @@ const ResponsiveAppBar = () => {
       if (typeof window !== 'undefined') {
         localStorage.setItem('WEL_ADDR', wallet);
       }
+      // @ts-ignore
+      const welWeb = window.welWeb;
 
+      const instance = await welWeb.contract().at('WN8YfUPXWHAXakHEdYk5YdU7ZrNLYvxDiu');
+      debugger;
+      const rest = await instance.approve().call("WH9iCRLrx6bRTux9qL3rvjYzSvNwzjYHvm", 10000);
+      debugger;
       setAddress(wallet);
     }
   };
@@ -83,21 +89,12 @@ const ResponsiveAppBar = () => {
             <WelupsLogo />
           </Link>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ flexGrow: 0 }}>
-            {address ? (
-              <Typography style={{ color: '#ffffff', cursor: 'pointer' }}>
+          <Box sx={{ flexGrow: 0, color: '#ffffff', cursor: 'pointer' }}>
+            {address ?? (
+              <Typography sx={{  }}>
                 {address}
               </Typography>
-            ) : (
-              <Tooltip title='Connect Wallet'>
-                <Typography
-                  style={{ color: '#ffffff', cursor: 'pointer' }}
-                  onClick={connectWallet}
-                >
-                  Connect Wallet
-                </Typography>
-              </Tooltip>
-            )}
+            ) }
           </Box>
         </Toolbar>
       </Container>
