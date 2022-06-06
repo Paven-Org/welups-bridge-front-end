@@ -3,6 +3,11 @@ export interface WEL2ETH {
   amount?: number;
 }
 
+export interface ETH2WEL {
+  wel_address?: string;
+  amount?: number;
+}
+
 export interface RequestClaimResp {
   token_address?: string;
   amount?: string;
@@ -17,4 +22,5 @@ export interface Transaction {
   tran_hex?: string;
   tran_id?: string;
   tran_raw_hex?: string;
+  transactionHash?: string;
 }

@@ -1,8 +1,8 @@
-import { User } from 'app/models/user';
-import { loginAction, logoutAction } from 'app/redux/auth/auth.action';
-import { RootState } from 'app/redux/store';
-import { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { LoginUser } from "app/models/user";
+import { loginAction, logoutAction } from "app/redux/auth/auth.action";
+import { RootState } from "app/redux/store";
+import { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { WELUPS_TOKEN, WELUPS_USERNAME } from '../commons/commons';
 
 const useAuth = () => {
@@ -13,7 +13,7 @@ const useAuth = () => {
   );
 
   const login = useCallback(
-    ({ username, password }: User) => {
+    ({ username, password }: LoginUser) => {
       dispatch(loginAction({ username, password }));
     },
     [dispatch]

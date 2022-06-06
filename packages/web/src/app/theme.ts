@@ -1,13 +1,14 @@
-import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
+import type {} from "@mui/lab/themeAugmentation";
 
 const welupsBridgeTheme = createTheme({
   palette: {
     primary: {
-      main: '#ffffff',
+      main: "#ffffff",
     },
     secondary: {
-      main: '#19857b',
+      main: "#19857b",
     },
     error: {
       main: red.A400,
@@ -17,22 +18,22 @@ const welupsBridgeTheme = createTheme({
     MuiTab: {
       styleOverrides: {
         root: {
-          color: '#666E75',
+          color: "#666E75",
         },
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
-          height: '64px',
-          color: '#ffffff',
-          backgroundColor: '#2A323D',
-          borderRadius: '8px',
-          '& fieldset': {
-            borderColor: '#2A323D',
+          height: "64px",
+          color: "#ffffff",
+          backgroundColor: "#2A323D",
+          borderRadius: "8px",
+          "& fieldset": {
+            borderColor: "#2A323D",
           },
-          '&:hover fieldset': {
-            borderColor: '#ffffff',
+          "&:hover fieldset": {
+            borderColor: "#ffffff",
           },
         },
       },
@@ -40,7 +41,7 @@ const welupsBridgeTheme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         shrink: {
-          color: '#ffffff',
+          color: "#ffffff",
         },
       },
     },

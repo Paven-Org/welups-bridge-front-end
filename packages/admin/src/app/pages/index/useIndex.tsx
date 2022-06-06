@@ -1,13 +1,13 @@
-import { useDispatch } from 'react-redux';
-import { useCallback } from 'react';
-import { loginAction } from 'app/redux/auth/auth.action';
-import { User } from 'app/models/user';
+import { useDispatch } from "react-redux";
+import { useCallback } from "react";
+import { loginAction } from "app/redux/auth/auth.action";
+import { LoginUser } from "app/models/user";
 
-const useMerchant = () => {
+const useIndex = () => {
   const dispatch = useDispatch();
 
   const login = useCallback(
-    ({ username, password }: User) => {
+    ({ username, password }: LoginUser) => {
       dispatch(loginAction({ username, password }));
     },
     [dispatch]
@@ -18,4 +18,4 @@ const useMerchant = () => {
   };
 };
 
-export default useMerchant;
+export default useIndex;
