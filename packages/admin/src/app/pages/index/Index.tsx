@@ -87,13 +87,13 @@ const Index: React.FC = () => {
                 Login
               </BridgeButton>
             </FieldContainer>
-            <Box
-              sx={[styles.forgot, styles.mt40]}
-              display="flex"
-              justifyContent="center"
-            >
-              Forgot Password ?
-            </Box>
+            {/*<Box*/}
+            {/*  sx={[styles.forgot, styles.mt40]}*/}
+            {/*  display="flex"*/}
+            {/*  justifyContent="center"*/}
+            {/*>*/}
+            {/*  Forgot Password ?*/}
+            {/*</Box>*/}
           </form>
         </Grid>
       </Grid>
